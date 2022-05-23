@@ -1,0 +1,10 @@
+@import 'colors';
+
+.singleContact {
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    background: $orange;
+}
+
