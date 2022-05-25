@@ -12,12 +12,21 @@ const Blog = ({ title, description }) => {
   );
 };
 
-export async function getServerSideProps() {
+// SSR cannot be used
+export async function getStaticProps() {
   return {
     props: {
       title: 'Article Title',
       description: 'Article Description'
     }
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { blogID: '1' } }],
+    // fallback has to be false
+    fallback: false
   };
 }
 
