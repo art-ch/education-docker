@@ -3,7 +3,7 @@ const News = ({ data }) => {
 };
 
 export async function getStaticProps(context) {
-  console.log('running getStaticProps');
+  console.log('running getStaticProps', context.previewData);
   return {
     props: {
       data: context.preview
